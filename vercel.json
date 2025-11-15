@@ -1,4 +1,4 @@
-
+{
   "buildCommand": "cd frontend && npm run dev --prefix frontend & cd backend && node backend/api/index.js",
   "outputDirectory": "frontend",
   "framework": "vite",
