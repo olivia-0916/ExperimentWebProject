@@ -1,32 +1,17 @@
 {
-  "buildCommand": "cd frontend && npm run dev --prefix frontend && cd backend && node backend/api/index.js",
-  "outputDirectory": "frontend",
+  "buildCommand": "cd frontend && npm run build",
+  "installCommand": "npm install --legacy-peer-deps && cd backend && npm install",
   "framework": "vite",
+  "functions": {
+    "backend/server.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/api/index.js"
+      "source": "/api/:path*",
+      "destination": "/backend/api/:path*"
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        }
-      ]
-    }
-  ],
-  "build": {
-    "env": {
-      "VITE_FIREBASE_API_KEY": "VITE_FIREBASE_API_KEY",
-      "VITE_FIREBASE_AUTH_DOMAIN": "VITE_FIREBASE_AUTH_DOMAIN",
-      "VITE_FIREBASE_PROJECT_ID": "VITE_FIREBASE_PROJECT_ID",
-      "VITE_FIREBASE_STORAGE_BUCKET": "VITE_FIREBASE_STORAGE_BUCKET",
-      "VITE_FIREBASE_MESSAGING_SENDER_ID": "VITE_FIREBASE_MESSAGING_SENDER_ID",
-      "VITE_FIREBASE_APP_ID": "VITE_FIREBASE_APP_ID"
-    }
-  }
+  ]
 }
