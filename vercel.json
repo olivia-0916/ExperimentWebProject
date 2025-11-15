@@ -1,5 +1,5 @@
-{
-  "buildCommand": "npm install --prefix frontend && npm run dev --prefix frontend & npm install --prefix backend && node backend/api/index.js",
+
+  "buildCommand": "cd frontend && npm run dev --prefix frontend & cd backend && node backend/api/index.js",
   "outputDirectory": "frontend",
   "framework": "vite",
   "rewrites": [
