@@ -8,6 +8,18 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+        // 1. Firebase API 配置 (通常是一個 JSON 字串)
+        window.__firebase_config = '{{ FIREBASE_CONFIG_JSON }}'; 
+        
+        // 2. 實驗網站的唯一 App ID (這是 StimulusPage 讀取 'artifacts' 的關鍵 ID)
+        window.__app_id = '{{ FIREBASE_APP_ID }}'; 
+
+        // 3. 初始用戶認證 Token (可選，用於登入)
+        window.__initial_auth_token = '{{ INITIAL_AUTH_TOKEN }}';
+    </script>
+    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
