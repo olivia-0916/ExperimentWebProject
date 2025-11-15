@@ -3,7 +3,7 @@
   "installCommand": "npm install --legacy-peer-deps && cd backend && npm install",
   "framework": "vite",
   "functions": {
-    "backend/server.js": {
+    "backend/api/index.js": {
       "memory": 1024,
       "maxDuration": 60
     }
