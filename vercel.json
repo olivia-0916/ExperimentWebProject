@@ -1,11 +1,16 @@
 {
-  "buildCommand": "npm install --legacy-peer-deps && npm run build --prefix frontend",
+  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
+  "functions": {
+    "backend/**": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/backend/index.js"
+      "destination": "/backend/server.js"
     }
   ],
   "headers": [
