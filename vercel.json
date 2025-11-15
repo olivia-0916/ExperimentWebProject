@@ -3,8 +3,10 @@
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "functions": {
-    "backend/api/index.js": {
-      "runtime": "nodejs20.x@latest"
+   "api/**": {
+      "runtime": "nodejs22.x", 
+      "memory": 1024,
+      "maxDuration": 60
     }
   },
   "rewrites": [
