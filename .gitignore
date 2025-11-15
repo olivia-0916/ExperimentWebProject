@@ -5,3 +5,4 @@ dist
 backend/serviceAccountKey.json
 
 
+.vercel

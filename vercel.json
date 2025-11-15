@@ -2,11 +2,6 @@
   "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs22.x@latest"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
