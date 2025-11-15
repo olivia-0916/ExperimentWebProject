@@ -1,17 +1,5 @@
 {
   "buildCommand": "cd frontend && npm run build",
   "installCommand": "npm install --legacy-peer-deps && cd backend && npm install",
-  "framework": "vite",
-  "functions": {
-    "api/index.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    }
-  ]
+  "framework": "vite"
 }
