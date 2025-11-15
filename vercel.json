@@ -3,7 +3,7 @@
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "functions": {
-    "backend/**": {
+    "backend/index.js": {
       "memory": 1024,
       "maxDuration": 60
     }
