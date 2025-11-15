@@ -2,7 +2,6 @@
   "buildCommand": "npm install --legacy-peer-deps && npm run build --prefix frontend",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
-  "serverless": true,
   "functions": {
     "backend/**": {
       "memory": 1024,
