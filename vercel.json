@@ -4,9 +4,7 @@
   "framework": "vite",
   "functions": {
     "api/**": {
-      "runtime": "nodejs22.x@latest", 
-      "memory": 1024,
-      "maxDuration": 60
+      "runtime": "nodejs22.x@latest"
     }
   },
   "rewrites": [
@@ -28,7 +26,6 @@
   ],
   "build": {
     "env": {
-
       "VITE_FIREBASE_API_KEY": "VITE_FIREBASE_API_KEY",
       "VITE_FIREBASE_AUTH_DOMAIN": "VITE_FIREBASE_AUTH_DOMAIN",
       "VITE_FIREBASE_PROJECT_ID": "VITE_FIREBASE_PROJECT_ID",
